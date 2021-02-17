@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>于志腾的技术专栏</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4001/page3/">
+    <link rel="alternate" type="application/rss+xml" title="于志腾的技术专栏" href="http://localhost:4001/feed.xml ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?1cc1fc4b4b456bf7c99ce80aec5bf009";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script>
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72449510-4', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">于志腾的技术专栏</a>
+        <small>PHP and Python and Vue Coder</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/demo/">
+                        
+                            <i class="fa fa-play"></i>Demo
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" index>
+    <div class="left">
+        <h1>Welcome to Yzt's blog </h1>
+        <small>兴趣是最大的驱动力，就当一种爱好吧！</small>
+        <hr>
+        <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/09/jekyll/">Ansible之ad-hoc</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-09
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#ad-hoc" title="Tag: ad-hoc" rel="tag">ad-hoc</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
+  <li><a href="#yum包管理配置源" id="markdown-toc-yum包管理配置源">yum包管理配置源</a></li>
+</ul>
+
+<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>macbookpro@bogon  /etc/ansible  tree
+.
+├── ansible.cfg
+├── hosts
+</code></pre></div></div>
+<h2 id="yum包管理配置源">yum包管理配置源</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/yum.repos.d
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/09/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/05/jekyll/">Ansible之配置文件hosts</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-05
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
+  <li><a href="#hosts-是什么" id="markdown-toc-hosts-是什么">hosts 是什么</a></li>
+  <li><a href="#hosts-几种不同的配置" id="markdown-toc-hosts-几种不同的配置">hosts 几种不同的配置</a></li>
+</ul>
+<p>ansible.cfg</p>
+
+<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
+<pre><code class="language-angular2">macbookpro@bogon  /etc/ansible  tree
+.
+├── ansible.cfg
+├── hosts
+</code></pre>
+<h2 id="hosts-是什么">hosts 是什么</h2>
+<p>hosts是ansible自动化任务中所有的主机组</p>
+<h2 id="hosts-几种不同的配置">hosts 几种不同的配置</h2>
+<p>1.密码登录</p>
+
+<pre><code class="language-angular2">192.168.0.104:22 ansible_ssh_user=playcrab  ansible_ssh_pass='123456'
+192.168.0.110:22 ansible_ssh_user=root  ansible_ssh_pass='123123'
+
+</code></pre>
+<p>2.公钥登录</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.104:22 ansible_ssh_user=playcrab  ansible_ssh_key_file=/Users/macbookpro/.ssh/id_rsa
+192.168.0.110:22 ansible_ssh_user=root   ansible_ssh_key_file=/Users/macbookpro/.ssh/id_rsa
+</code></pre></div></div>
+
+<p>3.公钥配置在ansible.cfg</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.104:22 ansible_ssh_user=playcrab
+192.168.0.110:22 ansible_ssh_user=root
+
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/05/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/03/jekyll/">Ansible之配置文件ansible.cfg</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-03
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
+  <li><a href="#ansiblecfg是什么" id="markdown-toc-ansiblecfg是什么">Ansible.cfg是什么</a></li>
+</ul>
+<p>ansible.cfg</p>
+
+<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
+<pre><code class="language-angular2">macbookpro@bogon  /etc/ansible  tree
+.
+├── ansible.cfg
+├── hosts
+</code></pre>
+<h2 id="ansiblecfg是什么">Ansible.cfg是什么</h2>
+<p>Ansible.cfg是ansible自动化任务所用的一个核心配置文件，大部分的配置文件都集中在defualts配置项目中。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/03/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/01/jekyll/">Ansible之安装</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-01
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#什么是ansible" id="markdown-toc-什么是ansible">什么是Ansible</a></li>
+  <li><a href="#ansible-的优势" id="markdown-toc-ansible-的优势">Ansible 的优势</a></li>
+  <li><a href="#ansible-的安装" id="markdown-toc-ansible-的安装">Ansible 的安装</a></li>
+  <li><a href="#ansible-的配置文件" id="markdown-toc-ansible-的配置文件">Ansible 的配置文件</a></li>
+</ul>
+<p>Ansible基础与安装</p>
+<h2 id="什么是ansible">什么是Ansible</h2>
+<p>Ansiblie 是python中的一个套模块，系统中的一套自动化工具，可以用来作为系统管理、自动化命令等任务</p>
+<h2 id="ansible-的优势">Ansible 的优势</h2>
+<p>ansible 的play_book模式，采用yaml配置，对于自动化执行一目了然</p>
+
+<h2 id="ansible-的安装">Ansible 的安装</h2>
+<ol>
+  <li>传统系统安装的方式，yum、apt-get</li>
+  <li>通过python的方式</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install ansible 
+
+easy_install ansible
+
+</code></pre></div></div>
+<p>3.安装完成之后，在终端输入ansible如下图
+<img src="https://buqiucdn.github.io/upload/ansible.png" alt="image" /></p>
+
+<h2 id="ansible-的配置文件">Ansible 的配置文件</h2>
+
+<ol>
+  <li>ansible.cfg 执行需求的全局性、默认的配置文件</li>
+  <li>hosts 默认机器资产清单文件</li>
+</ol>
+
+<p><img src="https://buqiucdn.github.io/upload/ansible_host.png" alt="image" /></p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/01/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/05/20/jekyll/">python 帮助你表白 520</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-05-20
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#python" title="Category: python" rel="category">python</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#python" title="Tag: python" rel="tag">python</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#代码" id="markdown-toc-代码">代码</a></li>
+  <li><a href="#安装包" id="markdown-toc-安装包">安装包</a></li>
+  <li><a href="#效果" id="markdown-toc-效果">效果</a></li>
+  <li><a href="#成功" id="markdown-toc-成功">成功</a></li>
+</ul>
+
+<p>身为一个码农，在最重要的日子需要展示一下自己的能力，与别人不一样的能力，那就撸一下代码，给ta一个惊喜！</p>
+
+<h2 id="代码">代码</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python
+</span><span class="kn">import</span> <span class="nn">pylab</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1500</span><span class="p">)</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">scipy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s">'red'</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s">'red'</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">2.5</span><span class="p">])</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="s">'YZTXY 520 LOVE'</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">fontweight</span><span class="o">=</span><span class="s">'bold'</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">'blue'</span><span class="p">,</span><span class="n">horizontalalignment</span><span class="o">=</span><span class="s">'center'</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="安装包">安装包</h2>
+
+<blockquote>
+  <p>sudo pip install matplotlib</p>
+</blockquote>
+
+<blockquote>
+  <p>sudo pip install scipy</p>
+</blockquote>
+
+<h2 id="效果">效果</h2>
+
+<p><img src="https://buqiucdn.github.io/upload/520.png" alt="image" /></p>
+
+<h2 id="成功">成功</h2>
+
+<p>快去表白吧！！！！</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/05/20/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2018/09/12/jekyll/">Python 快速入门-变量</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2018-09-12
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>Yzt
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#python" title="Category: python" rel="category">python</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#python" title="Tag: python" rel="tag">python</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#python中什么是变量" id="markdown-toc-python中什么是变量">Python中什么是变量</a></li>
+</ul>
+
+<p>随着技术的不断的发展，python的应用场景越来越多，优势越来越明显，接下来一起我说一下自己的学习历程</p>
+
+<h2 id="python中什么是变量">Python中什么是变量</h2>
+
+<hr />
+
+<p>在Python中，变量的概念基本上和初中代数的方程变量是一致的。</p>
+
+<p>例如，对于方程式 y=x*x ，x就是变量。当x=2时，计算结果是4，当x=5时，计算结果是25。</p>
+
+<p>只是在计算机程序中，变量不仅可以是数字，还可以是任意数据类型。</p>
+
+<p>在Python程序中，变量是用一个变量名表示，变量名必须是大小写英文、数字和下划线（_）的组合，且不能用数字开头，比如</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">yzt</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="err">变量</span><span class="n">yzt</span><span class="err">是一个整数。</span>
+
+<span class="n">yzts</span> <span class="o">=</span> <span class="s">'花开'</span>
+
+<span class="err">变量</span><span class="n">yzts</span><span class="err">是一个字符串。</span>
+
+<span class="err">在</span><span class="n">Python</span><span class="err">中，等号</span><span class="o">=</span><span class="err">是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量，例如：</span>
+
+<span class="n">yzt</span> <span class="o">=</span> <span class="mi">123</span>    <span class="c1"># yzt是整数
+</span><span class="k">print</span> <span class="n">yzt</span>
+<span class="n">yzt</span> <span class="o">=</span> <span class="s">'YZTXY'</span>   <span class="c1"># yzt变为字符串
+</span><span class="k">print</span> <span class="n">yzt</span>
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2018/09/12/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+        </ul>
+
+
+
+        <!-- Pagination links -->
+        <div class="pagination">
+          
+            <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
+            <a href="/page2" class="previous"><i class="fa fa-angle-left"></i></a>
+          
+          <span class="page_number ">3/4</span>
+          
+            <a href="/page4" class="next"><i class="fa fa-angle-right"></i></a>
+            <a href="/page4" class="next"><i class="fa fa-angle-double-right"></i></a>
+          
+        </div>
+    </div>
+    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
+    <div class="right">
+        <div class="wrap">
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    Recent Posts
+                </div>
+                <ul class="content-ul" recent>
+                    
+                        <li><a href="/2020/10/06/jekyll/">初学ts规范</a></li>
+                    
+                        <li><a href="/2020/06/12/jekyll/">初学go8</a></li>
+                    
+                        <li><a href="/2020/05/13/jekyll/">初学go7</a></li>
+                    
+                        <li><a href="/2020/05/10/jekyll/">初学go6</a></li>
+                    
+                        <li><a href="/2020/04/20/jekyll/">初学go3</a></li>
+                    
+                        <li><a href="/2020/04/03/jekyll/">初学go5</a></li>
+                    
+                        <li><a href="/2020/03/25/jekyll/">初学go1</a></li>
+                    
+                        <li><a href="/2020/03/20/jekyll/">初学go</a></li>
+                    
+                        <li><a href="/2019/08/07/jekyll/">playbook之yml内容讲解</a></li>
+                    
+                        <li><a href="/2019/08/05/jekyll/">playbook之yml配置</a></li>
+                    
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="side ">
+                <div>
+                    <i class="fa fa-th-list"></i>
+                    Categories
+                </div>
+                <ul class="content-ul" cate>
+                    
+                    <li>
+                        <a href="/category/#php" class="categories-list-item" cate="php">
+                            <span class="name">
+                                php
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#python" class="categories-list-item" cate="python">
+                            <span class="name">
+                                python
+                            </span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#jekyll" class="categories-list-item" cate="jekyll">
+                            <span class="name">
+                                jekyll
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#Ansible" class="categories-list-item" cate="Ansible">
+                            <span class="name">
+                                Ansible
+                            </span>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#golang" class="categories-list-item" cate="golang">
+                            <span class="name">
+                                golang
+                            </span>
+                            <span class="badge">7</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#typescript" class="categories-list-item" cate="typescript">
+                            <span class="name">
+                                typescript
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <div class="side">
+                <div>
+                    <i class="fa fa-tags"></i>
+                    Tags
+                </div>
+                <div class="tags-cloud">
+                    
+                    
+                    
+                    
+
+                    
+
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#restful" style="font-size: 9pt; color: #999;">restful</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#api" style="font-size: 9pt; color: #999;">api</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#python" style="font-size: 15pt; color: #333;">python</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#jekyll" style="font-size: 9pt; color: #999;">jekyll</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#Ansible" style="font-size: 12pt; color: #666;">Ansible</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ad-hoc" style="font-size: 10.5pt; color: #777;">ad-hoc</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#playbook" style="font-size: 12pt; color: #666;">playbook</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#go" style="font-size: 18pt; color: #000;">go</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ts" style="font-size: 9pt; color: #999;">ts</a>
+                    
+                </div>
+            </div>
+
+            <!-- <div class="side">
+                <div>
+                    <i class="fa fa-external-link"></i>
+                    Links
+                </div>
+                <ul  class="content-ul">
+
+                </ul>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- <script src="/js/scroll.min.js " charset="utf-8"></script> -->
+<!-- <script src="/js/pageContent.js " charset="utf-8"></script> -->
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             来于志腾的个人专栏！ 
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/buqiucdn" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:1148727869@qq.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>       
+            <a href="https://www.linkedin.com/in/yuzhiteng" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>  
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>
