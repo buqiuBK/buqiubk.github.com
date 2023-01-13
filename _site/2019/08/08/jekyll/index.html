@@ -210,13 +210,11 @@
 
 <h2 id="mac">mac</h2>
 <h4 id="mac下载">mac下载</h4>
-
-<p>https://golang.google.cn/dl/go1.18.3.darwin-amd64.pkg</p>
-
+<pre><code class="language-angular2html">https://golang.google.cn/dl/go1.18.3.darwin-amd64.pkg
+</code></pre>
 <p>双击安装</p>
 
 <p>安装完成后打开终端找到go安装目录</p>
-
 <div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="x"> </span><span class="err">~</span><span class="x"> </span><span class="o">%</span><span class="x"> </span><span class="n">which</span><span class="x"> </span><span class="k">go</span><span class="x">
 </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="k">go</span><span class="x">
 </span><span class="n">将下面的内容写入到环境变量中</span><span class="err">，</span><span class="n">写入完成后重开终端</span><span class="x">
@@ -236,12 +234,12 @@
 安装完成后，搜索环境与变量</p>
 
 <div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">此用gomod方式管理第三方依赖库</span><span class="x">
-</span><span class="n">名称</span><span class="x">	</span><span class="n">值</span><span class="x">
-</span><span class="n">GO111MODULE</span><span class="x">	</span><span class="n">on</span><span class="x">
-</span><span class="n">其他变量都在安装时配置好了</span><span class="x">
-</span><span class="n">可以在cmd中打印变量查看</span><span class="x">
+</span></code></pre></div></div>
+<p><img src="img.png" alt="img.png" /></p>
 
-</span><span class="err">$</span><span class="x"> </span><span class="k">go</span><span class="x"> </span><span class="n">env</span><span class="x">
+<p>其他变量都在安装时配置好了
+可以在cmd中打印变量查看</p>
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="x"> </span><span class="k">go</span><span class="x"> </span><span class="n">env</span><span class="x">
 </span><span class="n">set</span><span class="x"> </span><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">
 </span><span class="n">set</span><span class="x"> </span><span class="n">GOARCH</span><span class="o">=</span><span class="n">amd64</span><span class="x">
 </span><span class="n">set</span><span class="x"> </span><span class="n">GOBIN</span><span class="o">=</span><span class="x">
@@ -281,30 +279,35 @@
 </span><span class="n">set</span><span class="x"> </span><span class="n">CGO_LDFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
 </span><span class="n">set</span><span class="x"> </span><span class="n">PKG_CONFIG</span><span class="o">=</span><span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="x">
 </span><span class="n">set</span><span class="x"> </span><span class="n">GOGCCFLAGS</span><span class="o">=-</span><span class="n">m64</span><span class="x"> </span><span class="o">-</span><span class="n">mthreads</span><span class="x"> </span><span class="o">-</span><span class="n">fno</span><span class="o">-</span><span class="n">caret</span><span class="o">-</span><span class="n">diagnostics</span><span class="x"> </span><span class="o">-</span><span class="n">Qunused</span><span class="o">-</span><span class="n">arguments</span><span class="x"> </span><span class="o">-</span><span class="n">fmessage</span><span class="o">-</span><span class="n">length</span><span class="o">=</span><span class="m">0</span><span class="x"> </span><span class="o">-</span><span class="n">fdebug</span><span class="o">-</span><span class="n">prefix</span><span class="o">-</span><span class="k">map</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Local</span><span class="err">\</span><span class="n">Temp</span><span class="err">\</span><span class="k">go</span><span class="o">-</span><span class="n">build2861639729</span><span class="o">=/</span><span class="n">tmp</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">build</span><span class="x"> </span><span class="o">-</span><span class="n">gno</span><span class="o">-</span><span class="n">record</span><span class="o">-</span><span class="n">gcc</span><span class="o">-</span><span class="n">switches</span><span class="x">
-</span><span class="n">goland配置一下goroot就行</span><span class="err">，</span><span class="n">gopath可以选择在项目里面新建文件夹存放</span><span class="x">
 </span></code></pre></div></div>
+<p>goland配置一下goroot就行，gopath可以选择在项目里面新建文件夹存放</p>
 
 <h3 id="linux安装">Linux安装</h3>
 
-<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">注意</span><span class="err">：</span><span class="n">m1</span><span class="x">
-</span><span class="n">https</span><span class="o">:</span><span class="c">//golang.google.cn/dl/go1.18.3.linux-amd64.tar.gz</span><span class="x">
+<p>https://golang.google.cn/dl/go1.18.3.linux-amd64.tar.gz</p>
 
-</span><span class="n">解压缩到安装路径</span><span class="err">，</span><span class="n">我这里选择放在</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">目录下</span><span class="x">
+<p>解压缩到安装路径，我这里选择放在/usr/local/目录下</p>
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tar</span><span class="x"> </span><span class="o">-</span><span class="n">xf</span><span class="x"> </span><span class="n">go1</span><span class="m">.18.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="x"> </span><span class="o">-</span><span class="n">C</span><span class="x"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="x">
+</span></code></pre></div></div>
+<ul>
+  <li>将下面的内容写入到环境变量中</li>
+</ul>
 
-</span><span class="n">tar</span><span class="x"> </span><span class="o">-</span><span class="n">xf</span><span class="x"> </span><span class="n">go1</span><span class="m">.18.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="x"> </span><span class="o">-</span><span class="n">C</span><span class="x"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="x">
-</span><span class="o">+</span><span class="x"> </span><span class="n">将下面的内容写入到环境变量中</span><span class="x">
-
-</span><span class="n">bash</span><span class="o">:</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bash</span><span class="o">:</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
 </span><span class="n">export</span><span class="x"> </span><span class="n">GOROOT</span><span class="o">=</span><span class="s">"/usr/local/go"</span><span class="x"> 	</span><span class="err">#</span><span class="x"> </span><span class="n">go解压路径</span><span class="x">
 </span><span class="n">export</span><span class="x"> </span><span class="n">GOPATH</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="k">go</span><span class="x">			</span><span class="err">#</span><span class="x"> </span><span class="n">个人程序位置</span><span class="x">
 </span><span class="n">export</span><span class="x"> </span><span class="n">GOBIN</span><span class="o">=</span><span class="err">$</span><span class="n">GOROOT</span><span class="o">/</span><span class="n">bin</span><span class="x">		</span><span class="err">#</span><span class="x"> </span><span class="n">go执行文件位置</span><span class="x">
 </span><span class="n">export</span><span class="x"> </span><span class="n">PATH</span><span class="o">=</span><span class="err">$</span><span class="n">PATH</span><span class="o">:</span><span class="err">$</span><span class="n">GOBIN</span><span class="x">		</span><span class="err">#</span><span class="x"> </span><span class="n">加载上面的环境变量到PATH</span><span class="x">
 </span><span class="n">export</span><span class="x"> </span><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">			</span><span class="err">#</span><span class="x"> </span><span class="n">此用gomod方式管理第三方依赖库</span><span class="x">
 </span><span class="n">export</span><span class="x"> </span><span class="n">GOPROXY</span><span class="o">=</span><span class="n">https</span><span class="o">:</span><span class="c">//goproxy.cn	 # go代理，下载其他人库的代理</span><span class="x">
- </span><span class="o">+</span><span class="x"> </span><span class="n">重载环境变量</span><span class="x">
-</span><span class="n">source</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
-</span><span class="o">+</span><span class="x">  </span><span class="n">使用</span><span class="x"> </span><span class="k">go</span><span class="x"> </span><span class="n">env</span><span class="x"> </span><span class="n">查看环境配置是否生效</span><span class="x">
 </span></code></pre></div></div>
+<ul>
+  <li>重载环境变量</li>
+</ul>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
+</span></code></pre></div></div>
+<p>使用 go env 查看环境配置是否生效</p>
 
 
         </article>
