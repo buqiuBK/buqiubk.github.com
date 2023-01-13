@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4001/</link>
     <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Jan 2023 22:47:08 +0800</pubDate>
-    <lastBuildDate>Fri, 13 Jan 2023 22:47:08 +0800</lastBuildDate>
+    <pubDate>Fri, 13 Jan 2023 22:53:13 +0800</pubDate>
+    <lastBuildDate>Fri, 13 Jan 2023 22:53:13 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -47,7 +47,8 @@
 
 &lt;div class=&quot;language-golang highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;GO111MODULE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;此用gomod方式管理第三方依赖库&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;img src=&quot;img.png&quot; alt=&quot;img.png&quot; /&gt;
+
+&lt;img src=&quot;https://buqiubk.github.io/upload/gomode.png&quot; alt=&quot;image&quot; /&gt;
 
 其他变量都在安装时配置好了
 可以在cmd中打印变量查看
