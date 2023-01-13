@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29dd0cd2-dc9d-464c-be5b-d90fb05a4de2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/_posts/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2019-07-01-jekyll.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-01-jekyll.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-08-08-jekyll.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-08-08-jekyll.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,8 @@
       <option name="presentableId" value="Default" />
       <updated>1648349370204</updated>
       <workItem from="1648349376721" duration="632000" />
-      <workItem from="1673607887538" duration="1437000" />
+      <workItem from="1673607887538" duration="1557000" />
+      <workItem from="1673611991829" duration="1149000" />
     </task>
     <servers />
   </component>
