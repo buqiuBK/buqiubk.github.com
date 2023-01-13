@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4001/</link>
     <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Jan 2023 20:00:29 +0800</pubDate>
-    <lastBuildDate>Fri, 13 Jan 2023 20:00:29 +0800</lastBuildDate>
+    <pubDate>Fri, 13 Jan 2023 20:07:21 +0800</pubDate>
+    <lastBuildDate>Fri, 13 Jan 2023 20:07:21 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -431,7 +431,7 @@ Ansible.cfg是ansible自动化任务所用的一个核心配置文件，大部�
       </item>
     
       <item>
-        <title>Ansible之安装</title>
+        <title>Ansible之安装00</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#什么是ansible&quot; id=&quot;markdown-toc-什么是ansible&quot;&gt;什么是Ansible&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#ansible-的优势&quot; id=&quot;markdown-toc-ansible-的优势&quot;&gt;Ansible 的优势&lt;/a&gt;&lt;/li&gt;
