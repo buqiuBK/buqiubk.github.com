@@ -150,6 +150,212 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2019/08/10/jekyll/">Go学习系列03-常量</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-08-10
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#golang" title="Category: golang" rel="category">golang</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#golang" title="Tag: golang" rel="tag">golang</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#什么是常量" id="markdown-toc-什么是常量">什么是常量</a></li>
+  <li><a href="#定义常量" id="markdown-toc-定义常量">定义常量</a></li>
+  <li><a href="#批量定义常量" id="markdown-toc-批量定义常量">批量定义常量</a></li>
+  <li><a href="#常量运算" id="markdown-toc-常量运算">常量运算</a></li>
+  <li><a href="#iota常量生成器" id="markdown-toc-iota常量生成器">iota常量生成器</a></li>
+  <li><a href="#无类型常量" id="markdown-toc-无类型常量">无类型常量</a></li>
+  <li><a href="#字面常量" id="markdown-toc-字面常量">字面常量</a></li>
+</ul>
+
+<h3 id="什么是常量">什么是常量</h3>
+<p>存储不会变化的变量，这个就是常量</p>
+<h3 id="定义常量">定义常量</h3>
+<p>使用关键字<code class="highlighter-rouge">const</code>定义，并且只能是布尔型、数字型（整数型、浮点型和复数）和字符串型。</p>
+
+<p>所有常量的运算都可以在编译期完成，这样不仅可以减少运行时的工作，也方便其他代码的编译优化，当操作数是常量时，一些运行时的错误也可以在编译时被发现，例如整数除零、字符串索引越界、任何导致无效浮点数的操作等。</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">const</span><span class="x"> </span><span class="n">常量名</span><span class="x"> </span><span class="p">[</span><span class="n">类型</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">常量值</span><span class="x">
+</span></code></pre></div></div>
+<p><code class="highlighter-rouge">在Go语言中，你可以省略类型说明符 [类型]，因为编译器可以根据变量的值来推断其类型。</code></p>
+
+<ul>
+  <li>显式类型定义： const b string = “abc”</li>
+  <li>隐式类型定义： const b = “abc”</li>
+</ul>
+
+<h3 id="批量定义常量">批量定义常量</h3>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">const</span><span class="x"> </span><span class="p">(</span><span class="x">
+    </span><span class="n">e</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">2.71</span><span class="x">
+    </span><span class="n">pi</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">3.14</span><span class="x">
+</span><span class="p">)</span><span class="x">
+</span></code></pre></div></div>
+
+<p>除了第一个外其它的常量右边的初始化表达式都可以省略，如果省略初始化表达式则表示使用前面常量的初始化表达式，对应的常量类型也是一样的。</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">const</span><span class="x"> </span><span class="p">(</span><span class="x">
+	</span><span class="n">a</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">1</span><span class="x">
+	</span><span class="n">b</span><span class="x">
+	</span><span class="n">c</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">2</span><span class="x">
+	</span><span class="n">d</span><span class="x">
+</span><span class="p">)</span><span class="x">
+</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="x"> </span><span class="n">b</span><span class="p">,</span><span class="x"> </span><span class="n">c</span><span class="p">,</span><span class="x"> </span><span class="n">d</span><span class="p">)</span><span class="x"> </span><span class="c">// "1 1 2 2"</span><span class="x">
+
+</span></code></pre></div></div>
+
+<h3 id="常量运算">常量运算</h3>
+<p>常量间的所有算术运算、逻辑运算和比较运算的结果也是常量，对常量的类型转换操作或以下函数调用都是返回常量结果：len、cap、real、imag、complex 和 unsafe.Sizeof。</p>
+
+<p>因为它们的值是在编译期就确定的，因此常量可以是构成类型的一部分，例如用于指定数组类型的长度：</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="x">
+</span><span class="k">const</span><span class="x"> </span><span class="n">IPv4Len</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">4</span><span class="x">
+
+</span><span class="c">// parseIPv4 解析一个 IPv4 地址 (d.d.d.d).</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="n">parseIPv4</span><span class="p">(</span><span class="n">s</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="n">IP</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="k">var</span><span class="x"> </span><span class="n">p</span><span class="x"> </span><span class="p">[</span><span class="n">IPv4Len</span><span class="p">]</span><span class="kt">byte</span><span class="x">
+	</span><span class="c">// ...</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
+
+<h3 id="iota常量生成器">iota常量生成器</h3>
+<p>常量声明可以使用 iota 常量生成器初始化，它用于生成一组以相似规则初始化的常量，但是不用每行都写一遍初始化表达式。在一个 const 声明语句中，在第一个声明的常量所在的行，iota 将会被置为 0，然后在每一个有常量声明的行加一。</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">type</span><span class="x"> </span><span class="n">Weekday</span><span class="x"> </span><span class="kt">int</span><span class="x">
+
+</span><span class="k">const</span><span class="x"> </span><span class="p">(</span><span class="x">
+	</span><span class="n">Sunday</span><span class="x"> </span><span class="n">Weekday</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">iota</span><span class="x">
+	</span><span class="n">Monday</span><span class="x">
+	</span><span class="n">Tuesday</span><span class="x">
+	</span><span class="n">Wednesday</span><span class="x">
+	</span><span class="n">Thursday</span><span class="x">
+	</span><span class="n">Friday</span><span class="x">
+	</span><span class="n">Saturday</span><span class="x">
+</span><span class="p">)</span><span class="x">
+</span></code></pre></div></div>
+
+<p>每一行的iota都是相同的值，不管一行内出现多少次数</p>
+
+<p>即使有一行不用iota，他也会自己增加</p>
+
+<p>const内未赋值，与上一行保持一致</p>
+
+<h3 id="无类型常量">无类型常量</h3>
+<p>Go语言的常量有个不同寻常之处。虽然一个常量可以有任意一个确定的基础类型，例如 int 或 float64，或者是类似 time.Duration 这样的基础类型，但是许多常量并没有一个明确的基础类型。</p>
+
+<p>编译器为这些没有明确的基础类型的数字常量提供比基础类型更高精度的算术运算，可以认为至少有 256bit 的运算精度。这里有六种未明确类型的常量类型，分别是无类型的布尔型、无类型的整数、无类型的字符、无类型的浮点数、无类型的复数、无类型的字符串。</p>
+
+<p>通过延迟明确常量的具体类型，不仅可以提供更高的运算精度，而且可以直接用于更多的表达式而不需要显式的类型转换。</p>
+
+<p>【示例 2】math.Pi 无类型的浮点数常量，可以直接用于任意需要浮点数或复数的地方：</p>
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span><span class="x"> </span><span class="n">x</span><span class="x"> </span><span class="kt">float32</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">math</span><span class="o">.</span><span class="n">Pi</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">y</span><span class="x"> </span><span class="kt">float64</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">math</span><span class="o">.</span><span class="n">Pi</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">z</span><span class="x"> </span><span class="kt">complex128</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">math</span><span class="o">.</span><span class="n">Pi</span><span class="x">
+</span></code></pre></div></div>
+
+<p>如果 math.Pi 被确定为特定类型，比如 float64，那么结果精度可能会不一样，同时对于需要 float32 或 complex128 类型值的地方则需要一个明确的强制类型转换：</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">const</span><span class="x"> </span><span class="n">Pi64</span><span class="x"> </span><span class="kt">float64</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">math</span><span class="o">.</span><span class="n">Pi</span><span class="x">
+
+</span><span class="k">var</span><span class="x"> </span><span class="n">x</span><span class="x"> </span><span class="kt">float32</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="kt">float32</span><span class="p">(</span><span class="n">Pi64</span><span class="p">)</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">y</span><span class="x"> </span><span class="kt">float64</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">Pi64</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">z</span><span class="x"> </span><span class="kt">complex128</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="kt">complex128</span><span class="p">(</span><span class="n">Pi64</span><span class="p">)</span><span class="x">
+</span></code></pre></div></div>
+
+<p>对于常量面值，不同的写法可能会对应不同的类型。例如 0、0.0、0i 和 \u0000 虽然有着相同的常量值，但是它们分别对应无类型的整数、无类型的浮点数、无类型的复数和无类型的字符等不同的常量类型。同样，true 和 false 也是无类型的布尔类型，字符串面值常量是无类型的字符串类型。</p>
+
+<h3 id="字面常量">字面常量</h3>
+<p>所谓字面常量（literal），是指程序中硬编码的常量。</p>
+
+<p>iota举例
+ 单位运算</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
+
+</span><span class="c">// 声明芯片类型</span><span class="x">
+</span><span class="k">type</span><span class="x"> </span><span class="n">ChipType</span><span class="x"> </span><span class="kt">int</span><span class="x">
+
+</span><span class="k">const</span><span class="x"> </span><span class="p">(</span><span class="x">
+	</span><span class="n">None</span><span class="x"> </span><span class="n">ChipType</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">iota</span><span class="x">
+	</span><span class="n">CPU</span><span class="x">           </span><span class="c">// 中央处理器</span><span class="x">
+	</span><span class="n">GPU</span><span class="x">           </span><span class="c">// 图形处理器</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">c</span><span class="x"> </span><span class="n">ChipType</span><span class="p">)</span><span class="x"> </span><span class="n">String</span><span class="p">()</span><span class="x"> </span><span class="kt">string</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="k">switch</span><span class="x"> </span><span class="n">c</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="k">case</span><span class="x"> </span><span class="n">None</span><span class="o">:</span><span class="x">
+		</span><span class="k">return</span><span class="x"> </span><span class="s">"None"</span><span class="x">
+	</span><span class="k">case</span><span class="x"> </span><span class="n">CPU</span><span class="o">:</span><span class="x">
+		</span><span class="k">return</span><span class="x"> </span><span class="s">"CPU"</span><span class="x">
+	</span><span class="k">case</span><span class="x"> </span><span class="n">GPU</span><span class="o">:</span><span class="x">
+		</span><span class="k">return</span><span class="x"> </span><span class="s">"GPU"</span><span class="x">
+	</span><span class="p">}</span><span class="x">
+
+	</span><span class="k">return</span><span class="x"> </span><span class="s">"N/A"</span><span class="x">
+</span><span class="p">}</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+
+	</span><span class="c">// 输出CPU的值并以整型格式显示</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%s %d"</span><span class="p">,</span><span class="x"> </span><span class="n">CPU</span><span class="p">,</span><span class="x"> </span><span class="n">CPU</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+ 
+</span></code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/08/10/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2019/08/09/jekyll/">Go学习系列02-变量</a>
                 </h2>
                 <div class="label">
@@ -795,98 +1001,6 @@ playbook: 由一个或者多个play组成，一个play可以包含多个task</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2019/07/11/jekyll/">Ansible之代码部署</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2019-07-11
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>YztSon
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#ad-hoc" title="Tag: ad-hoc" rel="tag">ad-hoc</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
-  <li><a href="#yum包管理配置源" id="markdown-toc-yum包管理配置源">yum包管理配置源</a></li>
-  <li><a href="#代码部署" id="markdown-toc-代码部署">代码部署</a></li>
-</ul>
-
-<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>macbookpro@bogon  /etc/ansible  tree
-.
-├── ansible.cfg
-├── hosts
-</code></pre></div></div>
-<h2 id="yum包管理配置源">yum包管理配置源</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/yum.repos.d
-</code></pre></div></div>
-<h2 id="代码部署">代码部署</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>如果机器上没有git 先要安装，注意下面的执行命令要用双引号
-
-ansible one -m git -a "repo=https://github.com/buqiucdn/buqiucdn.github.io dest=/opt/imoocc version=HEAD" -f 5 -l 192.168.0.108
-
-192.168.0.108 | CHANGED =&gt; {
-    "after": "9b0f58b04bca0d266b6c633b873471229cfb2568",
-    "ansible_facts": {
-        "discovered_interpreter_python": "/usr/bin/python"
-    },
-    "before": "HEAD",
-    "changed": true,
-    "remote_url_changed": false
-}
-</code></pre></div></div>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2019/07/11/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -914,6 +1028,8 @@ ansible one -m git -a "repo=https://github.com/buqiucdn/buqiucdn.github.io dest=
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2019/08/10/jekyll/">Go学习系列03-常量</a></li>
+                    
                         <li><a href="/2019/08/09/jekyll/">Go学习系列02-变量</a></li>
                     
                         <li><a href="/2019/08/08/jekyll/">Go学习系列01-安装环境</a></li>
@@ -931,8 +1047,6 @@ ansible one -m git -a "repo=https://github.com/buqiucdn/buqiucdn.github.io dest=
                         <li><a href="/2019/07/05/jekyll/">Ansible之配置文件hosts</a></li>
                     
                         <li><a href="/2019/07/03/jekyll/">Ansible之配置文件ansible.cfg</a></li>
-                    
-                        <li><a href="/2019/07/01/jekyll/">Ansible之安装</a></li>
                     
                 </ul>
             </div>
@@ -986,7 +1100,7 @@ ansible one -m git -a "repo=https://github.com/buqiucdn/buqiucdn.github.io dest=
                             <span class="name">
                                 golang
                             </span>
-                            <span class="badge">2</span>
+                            <span class="badge">3</span>
                         </a>
                     </li>
                     
@@ -1061,7 +1175,7 @@ ansible one -m git -a "repo=https://github.com/buqiucdn/buqiucdn.github.io dest=
                       
                       
                       
-                      <a href="/tag/#golang" style="font-size: 11.5pt; color: #777;">golang</a>
+                      <a href="/tag/#golang" style="font-size: 13.5pt; color: #444;">golang</a>
                     
                 </div>
             </div>
