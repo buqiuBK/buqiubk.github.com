@@ -150,6 +150,114 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2018/09/11/jekyll/">Python 快速入门-list遍历</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2018-09-11
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>Yzt
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#python" title="Category: python" rel="category">python</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#python" title="Tag: python" rel="tag">python</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#数据结构" id="markdown-toc-数据结构">数据结构</a></li>
+</ul>
+
+<p>随着技术的不断的发展，python的应用场景越来越多，优势越来越明显，接下来一起我说一下自己的学习历程</p>
+
+<h2 id="数据结构">数据结构</h2>
+<ul>
+  <li>
+    <p>列表</p>
+  </li>
+  <li>
+    <p>查找、插入、排序、删除</p>
+  </li>
+</ul>
+
+<ol>
+  <li>列表遍历：</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lista</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s">'abc'</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]]</span>
+
+<span class="c1"># 类型判断
+</span><span class="n">b</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lista</span><span class="p">,(</span><span class="nb">int</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="nb">list</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span><span class="nb">str</span><span class="p">)):</span>
+
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        
+<span class="c1"># 结果
+</span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="n">a</span>
+<span class="n">b</span>
+<span class="n">c</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2018/09/11/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2018/09/10/jekyll/">Python 快速入门-数据结构之list</a>
                 </h2>
                 <div class="label">
@@ -514,6 +622,8 @@ a.add('sss')
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2019/08/09/jekyll/">Go学习系列02-变量</a></li>
+                    
                         <li><a href="/2019/08/08/jekyll/">Go学习系列01-安装环境</a></li>
                     
                         <li><a href="/2019/08/07/jekyll/">playbook之yml内容讲解</a></li>
@@ -531,8 +641,6 @@ a.add('sss')
                         <li><a href="/2019/07/03/jekyll/">Ansible之配置文件ansible.cfg</a></li>
                     
                         <li><a href="/2019/07/01/jekyll/">Ansible之安装</a></li>
-                    
-                        <li><a href="/2019/05/20/jekyll/">python 帮助你表白 520</a></li>
                     
                 </ul>
             </div>
@@ -586,7 +694,7 @@ a.add('sss')
                             <span class="name">
                                 golang
                             </span>
-                            <span class="badge">1</span>
+                            <span class="badge">2</span>
                         </a>
                     </li>
                     
@@ -661,7 +769,7 @@ a.add('sss')
                       
                       
                       
-                      <a href="/tag/#golang" style="font-size: 9pt; color: #999;">golang</a>
+                      <a href="/tag/#golang" style="font-size: 11.5pt; color: #777;">golang</a>
                     
                 </div>
             </div>
