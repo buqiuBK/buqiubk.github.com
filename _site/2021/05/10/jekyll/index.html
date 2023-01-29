@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ansible之配置文件ansible.cfg</title>
-    <meta name="description" content="  Ansible 的配置目录  Ansible.cfg是什么ansible.cfgAnsible 的配置目录macbookpro@bogon  /etc/ansible  tree.├── ansible.cfg├── hostsAnsible.cfg是什么Ansible.cfg是ansible自动化任务所...">
+    <title>Python 快速入门-数据结构之list</title>
+    <meta name="description" content="  数据结构随着技术的不断的发展，python的应用场景越来越多，优势越来越明显，接下来一起我说一下自己的学习历程数据结构      列表        查找、插入、排序、删除    定义方式：list1 = [1,2,3,4,5]list2 = list('12345')list3 = list(range(5...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4001/2022/07/03/jekyll/">
+    <link rel="canonical" href="http://localhost:4001/2021/05/10/jekyll/">
     <link rel="alternate" type="application/rss+xml" title="buqiu" href="http://localhost:4001/feed.xml ">
 
 
@@ -143,15 +143,15 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Ansible之配置文件ansible.cfg</h1>
+        <h1>Python 快速入门-数据结构之list</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2022-07-03
+                <i class="fa fa-calendar"></i>2021-05-10
             </div>
 
             <div class="label-card">
-                <i class="fa fa-user"></i>YztSon
+                <i class="fa fa-user"></i>Yzt
                 
             </div>
             <div class="label-card">
@@ -170,7 +170,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
+        <a href="/category/#python" title="Category: python" rel="category">python</a>
     
   
 
@@ -187,8 +187,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a-->
-        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
+        <!--a href="/tag/#python" title="Tag: python" rel="tag">python</a-->
+        <a href="/tag/#python" title="Tag: python" rel="tag">python</a>
     
   
 
@@ -200,69 +200,95 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
-  <li><a href="#ansiblecfg是什么" id="markdown-toc-ansiblecfg是什么">Ansible.cfg是什么</a></li>
-  <li><a href="#ansiblecfg配置讲解" id="markdown-toc-ansiblecfg配置讲解">Ansible.cfg配置讲解</a></li>
+  <li><a href="#数据结构" id="markdown-toc-数据结构">数据结构</a></li>
 </ul>
-<p>ansible.cfg</p>
 
-<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
-<pre><code class="language-angular2">macbookpro@bogon  /etc/ansible  tree
-.
-├── ansible.cfg
-├── hosts
-</code></pre>
-<h2 id="ansiblecfg是什么">Ansible.cfg是什么</h2>
-<p>Ansible.cfg是ansible自动化任务所用的一个核心配置文件，大部分的配置文件都集中在defualts配置项目中。</p>
+<p>随着技术的不断的发展，python的应用场景越来越多，优势越来越明显，接下来一起我说一下自己的学习历程</p>
 
-<h2 id="ansiblecfg配置讲解">Ansible.cfg配置讲解</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1）inventory 
-该参数表示资源清单inventory文件的位置，资源清单就是一些Ansible需要连接管理的主机列表 
-inventory = /root/ansible/hosts
+<h2 id="数据结构">数据结构</h2>
+<ul>
+  <li>
+    <p>列表</p>
+  </li>
+  <li>
+    <p>查找、插入、排序、删除</p>
+  </li>
+</ul>
 
-2）library 
-Ansible的操作动作，无论是本地或远程，都使用一小段代码来执行，这小段代码称为模块，这个library参数就是指向存放Ansible模块的目录 
-library = /usr/share/ansible
+<ol>
+  <li>定义方式：</li>
+</ol>
 
-3）forks 
-设置默认情况下Ansible最多能有多少个进程同时工作，默认设置最多5个进程并行处理。具体需要设置多少个，可以根据控制主机的性能和被管理节点的数量来确定。 
-forks = 5
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="nx">list2</span> <span class="o">=</span> <span class="nx">list</span><span class="p">(</span><span class="s1">'12345'</span><span class="p">)</span>
+<span class="nx">list3</span> <span class="o">=</span> <span class="nx">list</span><span class="p">(</span><span class="nx">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nx">list4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+<span class="nx">list5</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">'1234'</span><span class="p">]</span>
 
-4）sudo_user 
-这是设置默认执行命令的用户，也可以在playbook中重新设置这个参数 
-sudo_user = root
-//注意:新版本已经作了修改，如ansible2.4.1下已经为：
-default_sudo_user = root 
+<span class="nx">print</span><span class="p">(</span><span class="nx">list3</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">list2</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">list1</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">list4</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">list5</span><span class="p">)</span>
 
-5）remote_port 
-这是指定连接被关节点的管理端口，默认是22，除非设置了特殊的SSH端口，不然这个参数一般是不需要修改的 
-remote_port = 22
-
-6）host_key_checking 
-这是设置是否检查SSH主机的密钥。可以设置为True或False 
-host_key_checking = False
-
-7）timeout 
-这是设置SSH连接的超时间隔，单位是秒。 
-timeout = 20
-
-8）log_path 
-Ansible系统默认是不记录日志的，如果想把Ansible系统的输出记录到人i治稳健中，需要设置log_path来指定一个存储Ansible日志的文件 
-log_path = /var/log/ansible.log
-
-另外需要注意，执行Ansible的用户需要有写入日志的权限，模块将会调用被管节点的syslog来记录，口令是不会出现的日志中的
-
-9）private_key_file
-
-在使用ssh公钥私钥登录系统时候，使用的密钥路径。
-
-private_key_file=/path/to/file.pem
+<span class="c1">//结果</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'1'</span><span class="p">,</span> <span class="s1">'2'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">,</span> <span class="s1">'4'</span><span class="p">,</span> <span class="s1">'5'</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">'1234'</span><span class="p">]</span>
 
 </code></pre></div></div>
 
-<p>还有更多的配置项，大家可以参考官方文档，如下：</p>
+<ol>
+  <li>相关操作函数</li>
+</ol>
 
-<p>http://docs.ansible.com/ansible/latest/intro_configuration.html#private-key-file</p>
+<blockquote>
+  <ol>
+    <li>in/not in</li>
+    <li>max/min</li>
+    <li>sum</li>
+    <li>len</li>
+    <li>zip(对象)</li>
+  </ol>
+</blockquote>
+
+<ol>
+  <li>函数的应用</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="n">sum1</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">len1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">sum1</span><span class="p">,</span><span class="n">len1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'2 没在'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'2 在'</span><span class="p">)</span>
+
+<span class="n">zips</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">zips</span><span class="p">)</span>
+
+<span class="c1"># 元组
+</span><span class="n">yz</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="s">'abc'</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">yz</span><span class="p">)</span>
+
+<span class="c1"># 结果
+</span><span class="mi">10</span> <span class="mi">4</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">2</span> <span class="err">在</span>
+<span class="o">&lt;</span><span class="nb">zip</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x10823bac8</span><span class="o">&gt;</span>
+<span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'a'</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">'b'</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">'c'</span><span class="p">)]</span>
+
+</code></pre></div></div>
 
 
         </article>
@@ -330,18 +356,6 @@ private_key_file=/path/to/file.pem
             
                 
                     
-                        
-                        <h2 id="similar_posts">Similar Posts</h2>
-                        <ul>
-                        
-                        <li class="relatedPost">
-                            <a href="/2022/07/05/jekyll/">Ansible之配置文件hosts
-                            
-                            </a>
-                        </li>
-                        
-                        
-                    
                 
             
         
@@ -349,32 +363,21 @@ private_key_file=/path/to/file.pem
             
                 
                     
-                        
-                        <li class="relatedPost">
-                            <a href="/2022/07/01/jekyll/">Ansible之安装
-                            
-                            </a>
-                        </li>
-                        
-                        
-                    
                 
             
         
-        
-            </ul>
         
 
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2022/07/01/jekyll/">Ansible之安装</a></p>
+        <p><strong>上一篇</strong> <a href="/2021/04/09/jekyll/">GitHub快速的搭建个人博客到个性化设计</a></p>
         
     </div>
     <div class="nex">
 
         
-        <p><strong>下一篇</strong> <a href="/2022/07/05/jekyll/">Ansible之配置文件hosts</a></p>
+        <p><strong>下一篇</strong> <a href="/2021/05/20/jekyll/">Python 快速入门-list遍历</a></p>
         
     </div>
 </div>
@@ -398,8 +401,6 @@ private_key_file=/path/to/file.pem
                     Content
                 </div>
                 <ul id="content-side" class="content-ul">
-                    
-                    <li><a href="#similar_posts">Similar Posts</a></li>
                     
                     <li><a href="#comments">Comments</a></li>
                 </ul>

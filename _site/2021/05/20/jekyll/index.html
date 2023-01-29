@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>python之set运用</title>
-    <meta name="description" content="  搭建方式集合（set）是一个无序的不重复元素序列可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。搭建方式bb = { s for s in a if s not in  'abc'}删除a.remove('aa...">
+    <title>Python 快速入门-list遍历</title>
+    <meta name="description" content="  数据结构随着技术的不断的发展，python的应用场景越来越多，优势越来越明显，接下来一起我说一下自己的学习历程数据结构      列表        查找、插入、排序、删除    列表遍历：lista  = [1,2,3,4,'abc',[4,5,6]]# 类型判断b = isinstance(lista,i...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4001/2021/09/08/jekyll/">
+    <link rel="canonical" href="http://localhost:4001/2021/05/20/jekyll/">
     <link rel="alternate" type="application/rss+xml" title="buqiu" href="http://localhost:4001/feed.xml ">
 
 
@@ -143,15 +143,15 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>python之set运用</h1>
+        <h1>Python 快速入门-list遍历</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2021-09-08
+                <i class="fa fa-calendar"></i>2021-05-20
             </div>
 
             <div class="label-card">
-                <i class="fa fa-user"></i>YztSon
+                <i class="fa fa-user"></i>Yzt
                 
             </div>
             <div class="label-card">
@@ -200,20 +200,51 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#搭建方式" id="markdown-toc-搭建方式">搭建方式</a></li>
+  <li><a href="#数据结构" id="markdown-toc-数据结构">数据结构</a></li>
 </ul>
-<p>集合（set）是一个无序的不重复元素序列
-可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。</p>
-<h2 id="搭建方式">搭建方式</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-bb = { s for s in a if s not in  'abc'}
 
-删除
-a.remove('aa')
-添加多个
-a.update('dd')
-添加单个
-a.add('sss')
+<p>随着技术的不断的发展，python的应用场景越来越多，优势越来越明显，接下来一起我说一下自己的学习历程</p>
+
+<h2 id="数据结构">数据结构</h2>
+<ul>
+  <li>
+    <p>列表</p>
+  </li>
+  <li>
+    <p>查找、插入、排序、删除</p>
+  </li>
+</ul>
+
+<ol>
+  <li>列表遍历：</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lista</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s">'abc'</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]]</span>
+
+<span class="c1"># 类型判断
+</span><span class="n">b</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lista</span><span class="p">,(</span><span class="nb">int</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="nb">list</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span><span class="nb">str</span><span class="p">)):</span>
+
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        
+<span class="c1"># 结果
+</span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="n">a</span>
+<span class="n">b</span>
+<span class="n">c</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
 
 </code></pre></div></div>
 
@@ -298,13 +329,13 @@ a.add('sss')
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2010/06/06/jekyll/">如何设计restful api</a></p>
+        <p><strong>上一篇</strong> <a href="/2021/05/10/jekyll/">Python 快速入门-数据结构之list</a></p>
         
     </div>
     <div class="nex">
 
         
-        <p><strong>下一篇</strong> <a href="/2021/09/09/jekyll/">GitHub快速的搭建个人博客到个性化设计</a></p>
+        <p><strong>下一篇</strong> <a href="/2021/09/12/jekyll/">Python 快速入门-变量</a></p>
         
     </div>
 </div>

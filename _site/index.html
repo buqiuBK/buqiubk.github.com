@@ -150,11 +150,11 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/08/10/jekyll/">Go学习系列03-常量</a>
+                  <a class="post-link" href="/2023/01/15/jekyll/">Go学习系列03-常量</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-08-10
+                        <i class="fa fa-calendar"></i>2023-01-15
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>YztSon
@@ -349,18 +349,188 @@
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/08/10/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2023/01/15/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/08/09/jekyll/">Go学习系列02-变量</a>
+                  <a class="post-link" href="/2022/12/01/jekyll/">Go学习系列01-安装环境</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-08-09
+                        <i class="fa fa-calendar"></i>2022-12-01
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#golang" title="Category: golang" rel="category">golang</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#golang" title="Tag: golang" rel="tag">golang</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#mac" id="markdown-toc-mac">mac</a>    <ul>
+      <li><a href="#mac下载" id="markdown-toc-mac下载">mac下载</a></li>
+      <li><a href="#windows安装" id="markdown-toc-windows安装">Windows安装</a></li>
+      <li><a href="#linux安装" id="markdown-toc-linux安装">Linux安装</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="mac">mac</h2>
+<h4 id="mac下载">mac下载</h4>
+<pre><code class="language-angular2html">https://golang.google.cn/dl/go1.18.3.darwin-amd64.pkg
+</code></pre>
+<p>双击安装</p>
+
+<p>安装完成后打开终端找到go安装目录</p>
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="x"> </span><span class="err">~</span><span class="x"> </span><span class="o">%</span><span class="x"> </span><span class="n">which</span><span class="x"> </span><span class="k">go</span><span class="x">
+</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="k">go</span><span class="x">
+</span><span class="n">将下面的内容写入到环境变量中</span><span class="err">，</span><span class="n">写入完成后重开终端</span><span class="x">
+</span><span class="n">zsh</span><span class="o">:</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">zshrc</span><span class="x">
+</span><span class="n">bash</span><span class="o">:</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
+
+</span><span class="n">export</span><span class="x"> </span><span class="n">GOROOT</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="k">go</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">go安装路径</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">GOPATH</span><span class="o">=/</span><span class="n">Users</span><span class="o">/</span><span class="n">cp</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">golang</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">个人程序位置</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">此用gomod方式管理第三方依赖库</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">GOPROXY</span><span class="o">=</span><span class="n">https</span><span class="o">:</span><span class="c">//goproxy.cn # go代理，下载其他人库的代理</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">PATH</span><span class="o">=</span><span class="err">$</span><span class="n">PATH</span><span class="o">:</span><span class="err">$</span><span class="n">GOROOT</span><span class="o">/</span><span class="n">bin</span><span class="o">:</span><span class="err">$</span><span class="n">GOPATH</span><span class="o">/</span><span class="n">bin</span><span class="x"> </span><span class="err">#</span><span class="x"> </span><span class="n">加载上面的环境变量</span><span class="x">
+</span><span class="n">使用</span><span class="x"> </span><span class="k">go</span><span class="x"> </span><span class="n">env</span><span class="x"> </span><span class="n">查看环境配置是否生效</span><span class="x">
+</span></code></pre></div></div>
+
+<h3 id="windows安装">Windows安装</h3>
+<p>下载windows installer版本
+安装完成后，搜索环境与变量</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">此用gomod方式管理第三方依赖库</span><span class="x">
+</span></code></pre></div></div>
+
+<p><img src="https://buqiubk.github.io/upload/gomode.png" alt="image" /></p>
+
+<p>其他变量都在安装时配置好了
+可以在cmd中打印变量查看</p>
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="x"> </span><span class="k">go</span><span class="x"> </span><span class="n">env</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOARCH</span><span class="o">=</span><span class="n">amd64</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOBIN</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOCACHE</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Local</span><span class="err">\</span><span class="k">go</span><span class="o">-</span><span class="n">build</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOENV</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Roaming</span><span class="err">\</span><span class="k">go</span><span class="err">\</span><span class="n">env</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOEXE</span><span class="o">=.</span><span class="n">exe</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOEXPERIMENT</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOFLAGS</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOHOSTARCH</span><span class="o">=</span><span class="n">amd64</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOHOSTOS</span><span class="o">=</span><span class="n">windows</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOINSECURE</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOMODCACHE</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="k">go</span><span class="err">\</span><span class="n">pkg</span><span class="err">\</span><span class="n">mod</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GONOPROXY</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GONOSUMDB</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOOS</span><span class="o">=</span><span class="n">windows</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOPATH</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="k">go</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOPRIVATE</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOPROXY</span><span class="o">=</span><span class="n">https</span><span class="o">:</span><span class="c">//proxy.golang.org,direct</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOROOT</span><span class="o">=</span><span class="n">c</span><span class="o">:</span><span class="err">\</span><span class="k">go</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOSUMDB</span><span class="o">=</span><span class="n">sum</span><span class="o">.</span><span class="n">golang</span><span class="o">.</span><span class="n">org</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOTMPDIR</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOTOOLDIR</span><span class="o">=</span><span class="n">c</span><span class="o">:</span><span class="err">\</span><span class="k">go</span><span class="err">\</span><span class="n">pkg</span><span class="err">\</span><span class="n">tool</span><span class="err">\</span><span class="n">windows_amd64</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOVCS</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOVERSION</span><span class="o">=</span><span class="n">go1</span><span class="m">.18.6</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GCCGO</span><span class="o">=</span><span class="n">gccgo</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOAMD64</span><span class="o">=</span><span class="n">v1</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">AR</span><span class="o">=</span><span class="n">ar</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">CC</span><span class="o">=</span><span class="n">gcc</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">CXX</span><span class="o">=</span><span class="n">g</span><span class="o">++</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_ENABLED</span><span class="o">=</span><span class="m">1</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOMOD</span><span class="o">=</span><span class="n">NUL</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOWORK</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_CFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_CPPFLAGS</span><span class="o">=</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_CXXFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_FFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_LDFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">PKG_CONFIG</span><span class="o">=</span><span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="x">
+</span><span class="n">set</span><span class="x"> </span><span class="n">GOGCCFLAGS</span><span class="o">=-</span><span class="n">m64</span><span class="x"> </span><span class="o">-</span><span class="n">mthreads</span><span class="x"> </span><span class="o">-</span><span class="n">fno</span><span class="o">-</span><span class="n">caret</span><span class="o">-</span><span class="n">diagnostics</span><span class="x"> </span><span class="o">-</span><span class="n">Qunused</span><span class="o">-</span><span class="n">arguments</span><span class="x"> </span><span class="o">-</span><span class="n">fmessage</span><span class="o">-</span><span class="n">length</span><span class="o">=</span><span class="m">0</span><span class="x"> </span><span class="o">-</span><span class="n">fdebug</span><span class="o">-</span><span class="n">prefix</span><span class="o">-</span><span class="k">map</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Local</span><span class="err">\</span><span class="n">Temp</span><span class="err">\</span><span class="k">go</span><span class="o">-</span><span class="n">build2861639729</span><span class="o">=/</span><span class="n">tmp</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">build</span><span class="x"> </span><span class="o">-</span><span class="n">gno</span><span class="o">-</span><span class="n">record</span><span class="o">-</span><span class="n">gcc</span><span class="o">-</span><span class="n">switches</span><span class="x">
+</span></code></pre></div></div>
+<p>goland配置一下goroot就行，gopath可以选择在项目里面新建文件夹存放</p>
+
+<h3 id="linux安装">Linux安装</h3>
+
+<p>https://golang.google.cn/dl/go1.18.3.linux-amd64.tar.gz</p>
+
+<p>解压缩到安装路径，我这里选择放在/usr/local/目录下</p>
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tar</span><span class="x"> </span><span class="o">-</span><span class="n">xf</span><span class="x"> </span><span class="n">go1</span><span class="m">.18.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="x"> </span><span class="o">-</span><span class="n">C</span><span class="x"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="x">
+</span></code></pre></div></div>
+<ul>
+  <li>将下面的内容写入到环境变量中</li>
+</ul>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bash</span><span class="o">:</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">GOROOT</span><span class="o">=</span><span class="s">"/usr/local/go"</span><span class="x"> 	</span><span class="err">#</span><span class="x"> </span><span class="n">go解压路径</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">GOPATH</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="k">go</span><span class="x">			</span><span class="err">#</span><span class="x"> </span><span class="n">个人程序位置</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">GOBIN</span><span class="o">=</span><span class="err">$</span><span class="n">GOROOT</span><span class="o">/</span><span class="n">bin</span><span class="x">		</span><span class="err">#</span><span class="x"> </span><span class="n">go执行文件位置</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">PATH</span><span class="o">=</span><span class="err">$</span><span class="n">PATH</span><span class="o">:</span><span class="err">$</span><span class="n">GOBIN</span><span class="x">		</span><span class="err">#</span><span class="x"> </span><span class="n">加载上面的环境变量到PATH</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">			</span><span class="err">#</span><span class="x"> </span><span class="n">此用gomod方式管理第三方依赖库</span><span class="x">
+</span><span class="n">export</span><span class="x"> </span><span class="n">GOPROXY</span><span class="o">=</span><span class="n">https</span><span class="o">:</span><span class="c">//goproxy.cn	 # go代理，下载其他人库的代理</span><span class="x">
+</span></code></pre></div></div>
+<ul>
+  <li>重载环境变量</li>
+</ul>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
+</span></code></pre></div></div>
+<p>使用 go env 查看环境配置是否生效</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/12/01/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/10/09/jekyll/">Go学习系列02-变量</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-10-09
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>YztSon
@@ -546,177 +716,7 @@ Go语言中变量声明后必须要使用，如果没有使用，会在编辑的
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/08/09/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/08/08/jekyll/">Go学习系列01-安装环境</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-08-08
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>YztSon
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#golang" title="Category: golang" rel="category">golang</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#golang" title="Tag: golang" rel="tag">golang</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#mac" id="markdown-toc-mac">mac</a>    <ul>
-      <li><a href="#mac下载" id="markdown-toc-mac下载">mac下载</a></li>
-      <li><a href="#windows安装" id="markdown-toc-windows安装">Windows安装</a></li>
-      <li><a href="#linux安装" id="markdown-toc-linux安装">Linux安装</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="mac">mac</h2>
-<h4 id="mac下载">mac下载</h4>
-<pre><code class="language-angular2html">https://golang.google.cn/dl/go1.18.3.darwin-amd64.pkg
-</code></pre>
-<p>双击安装</p>
-
-<p>安装完成后打开终端找到go安装目录</p>
-<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="x"> </span><span class="err">~</span><span class="x"> </span><span class="o">%</span><span class="x"> </span><span class="n">which</span><span class="x"> </span><span class="k">go</span><span class="x">
-</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="k">go</span><span class="x">
-</span><span class="n">将下面的内容写入到环境变量中</span><span class="err">，</span><span class="n">写入完成后重开终端</span><span class="x">
-</span><span class="n">zsh</span><span class="o">:</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">zshrc</span><span class="x">
-</span><span class="n">bash</span><span class="o">:</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
-
-</span><span class="n">export</span><span class="x"> </span><span class="n">GOROOT</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="k">go</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">go安装路径</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">GOPATH</span><span class="o">=/</span><span class="n">Users</span><span class="o">/</span><span class="n">cp</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">golang</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">个人程序位置</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">此用gomod方式管理第三方依赖库</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">GOPROXY</span><span class="o">=</span><span class="n">https</span><span class="o">:</span><span class="c">//goproxy.cn # go代理，下载其他人库的代理</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">PATH</span><span class="o">=</span><span class="err">$</span><span class="n">PATH</span><span class="o">:</span><span class="err">$</span><span class="n">GOROOT</span><span class="o">/</span><span class="n">bin</span><span class="o">:</span><span class="err">$</span><span class="n">GOPATH</span><span class="o">/</span><span class="n">bin</span><span class="x"> </span><span class="err">#</span><span class="x"> </span><span class="n">加载上面的环境变量</span><span class="x">
-</span><span class="n">使用</span><span class="x"> </span><span class="k">go</span><span class="x"> </span><span class="n">env</span><span class="x"> </span><span class="n">查看环境配置是否生效</span><span class="x">
-</span></code></pre></div></div>
-
-<h3 id="windows安装">Windows安装</h3>
-<p>下载windows installer版本
-安装完成后，搜索环境与变量</p>
-
-<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">  </span><span class="err">#</span><span class="x"> </span><span class="n">此用gomod方式管理第三方依赖库</span><span class="x">
-</span></code></pre></div></div>
-
-<p><img src="https://buqiubk.github.io/upload/gomode.png" alt="image" /></p>
-
-<p>其他变量都在安装时配置好了
-可以在cmd中打印变量查看</p>
-<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="x"> </span><span class="k">go</span><span class="x"> </span><span class="n">env</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOARCH</span><span class="o">=</span><span class="n">amd64</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOBIN</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOCACHE</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Local</span><span class="err">\</span><span class="k">go</span><span class="o">-</span><span class="n">build</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOENV</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Roaming</span><span class="err">\</span><span class="k">go</span><span class="err">\</span><span class="n">env</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOEXE</span><span class="o">=.</span><span class="n">exe</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOEXPERIMENT</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOFLAGS</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOHOSTARCH</span><span class="o">=</span><span class="n">amd64</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOHOSTOS</span><span class="o">=</span><span class="n">windows</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOINSECURE</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOMODCACHE</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="k">go</span><span class="err">\</span><span class="n">pkg</span><span class="err">\</span><span class="n">mod</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GONOPROXY</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GONOSUMDB</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOOS</span><span class="o">=</span><span class="n">windows</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOPATH</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="k">go</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOPRIVATE</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOPROXY</span><span class="o">=</span><span class="n">https</span><span class="o">:</span><span class="c">//proxy.golang.org,direct</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOROOT</span><span class="o">=</span><span class="n">c</span><span class="o">:</span><span class="err">\</span><span class="k">go</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOSUMDB</span><span class="o">=</span><span class="n">sum</span><span class="o">.</span><span class="n">golang</span><span class="o">.</span><span class="n">org</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOTMPDIR</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOTOOLDIR</span><span class="o">=</span><span class="n">c</span><span class="o">:</span><span class="err">\</span><span class="k">go</span><span class="err">\</span><span class="n">pkg</span><span class="err">\</span><span class="n">tool</span><span class="err">\</span><span class="n">windows_amd64</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOVCS</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOVERSION</span><span class="o">=</span><span class="n">go1</span><span class="m">.18.6</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GCCGO</span><span class="o">=</span><span class="n">gccgo</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOAMD64</span><span class="o">=</span><span class="n">v1</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">AR</span><span class="o">=</span><span class="n">ar</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">CC</span><span class="o">=</span><span class="n">gcc</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">CXX</span><span class="o">=</span><span class="n">g</span><span class="o">++</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_ENABLED</span><span class="o">=</span><span class="m">1</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOMOD</span><span class="o">=</span><span class="n">NUL</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOWORK</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_CFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_CPPFLAGS</span><span class="o">=</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_CXXFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_FFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">CGO_LDFLAGS</span><span class="o">=-</span><span class="n">g</span><span class="x"> </span><span class="o">-</span><span class="n">O2</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">PKG_CONFIG</span><span class="o">=</span><span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="x">
-</span><span class="n">set</span><span class="x"> </span><span class="n">GOGCCFLAGS</span><span class="o">=-</span><span class="n">m64</span><span class="x"> </span><span class="o">-</span><span class="n">mthreads</span><span class="x"> </span><span class="o">-</span><span class="n">fno</span><span class="o">-</span><span class="n">caret</span><span class="o">-</span><span class="n">diagnostics</span><span class="x"> </span><span class="o">-</span><span class="n">Qunused</span><span class="o">-</span><span class="n">arguments</span><span class="x"> </span><span class="o">-</span><span class="n">fmessage</span><span class="o">-</span><span class="n">length</span><span class="o">=</span><span class="m">0</span><span class="x"> </span><span class="o">-</span><span class="n">fdebug</span><span class="o">-</span><span class="n">prefix</span><span class="o">-</span><span class="k">map</span><span class="o">=</span><span class="n">C</span><span class="o">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="m">49273</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Local</span><span class="err">\</span><span class="n">Temp</span><span class="err">\</span><span class="k">go</span><span class="o">-</span><span class="n">build2861639729</span><span class="o">=/</span><span class="n">tmp</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">build</span><span class="x"> </span><span class="o">-</span><span class="n">gno</span><span class="o">-</span><span class="n">record</span><span class="o">-</span><span class="n">gcc</span><span class="o">-</span><span class="n">switches</span><span class="x">
-</span></code></pre></div></div>
-<p>goland配置一下goroot就行，gopath可以选择在项目里面新建文件夹存放</p>
-
-<h3 id="linux安装">Linux安装</h3>
-
-<p>https://golang.google.cn/dl/go1.18.3.linux-amd64.tar.gz</p>
-
-<p>解压缩到安装路径，我这里选择放在/usr/local/目录下</p>
-<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tar</span><span class="x"> </span><span class="o">-</span><span class="n">xf</span><span class="x"> </span><span class="n">go1</span><span class="m">.18.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="x"> </span><span class="o">-</span><span class="n">C</span><span class="x"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="x">
-</span></code></pre></div></div>
-<ul>
-  <li>将下面的内容写入到环境变量中</li>
-</ul>
-
-<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bash</span><span class="o">:</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">GOROOT</span><span class="o">=</span><span class="s">"/usr/local/go"</span><span class="x"> 	</span><span class="err">#</span><span class="x"> </span><span class="n">go解压路径</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">GOPATH</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="k">go</span><span class="x">			</span><span class="err">#</span><span class="x"> </span><span class="n">个人程序位置</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">GOBIN</span><span class="o">=</span><span class="err">$</span><span class="n">GOROOT</span><span class="o">/</span><span class="n">bin</span><span class="x">		</span><span class="err">#</span><span class="x"> </span><span class="n">go执行文件位置</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">PATH</span><span class="o">=</span><span class="err">$</span><span class="n">PATH</span><span class="o">:</span><span class="err">$</span><span class="n">GOBIN</span><span class="x">		</span><span class="err">#</span><span class="x"> </span><span class="n">加载上面的环境变量到PATH</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">GO111MODULE</span><span class="o">=</span><span class="n">on</span><span class="x">			</span><span class="err">#</span><span class="x"> </span><span class="n">此用gomod方式管理第三方依赖库</span><span class="x">
-</span><span class="n">export</span><span class="x"> </span><span class="n">GOPROXY</span><span class="o">=</span><span class="n">https</span><span class="o">:</span><span class="c">//goproxy.cn	 # go代理，下载其他人库的代理</span><span class="x">
-</span></code></pre></div></div>
-<ul>
-  <li>重载环境变量</li>
-</ul>
-
-<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span><span class="x"> </span><span class="err">~</span><span class="o">/.</span><span class="n">bashrc</span><span class="x">
-</span></code></pre></div></div>
-<p>使用 go env 查看环境配置是否生效</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/08/08/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/10/09/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -919,11 +919,11 @@ name: “”</p>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/08/02/jekyll/">playbook的组成</a>
+                  <a class="post-link" href="/2022/08/03/jekyll/">Ansible之配置文件ansible.cfg</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-08-02
+                        <i class="fa fa-calendar"></i>2022-08-03
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>YztSon
@@ -959,7 +959,7 @@ name: “”</p>
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#playbook" title="Tag: playbook" rel="tag">playbook</a>
+        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
     
   
 
@@ -969,34 +969,24 @@ name: “”</p>
                 </div>
                 <div class="excerpt">
                     <ul id="markdown-toc">
-  <li><a href="#什么是playbook" id="markdown-toc-什么是playbook">什么是playbook</a></li>
-  <li><a href="#playbook-组成" id="markdown-toc-playbook-组成">playbook 组成</a></li>
-  <li><a href="#playbook的优势" id="markdown-toc-playbook的优势">playbook的优势</a></li>
+  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
+  <li><a href="#ansiblecfg是什么" id="markdown-toc-ansiblecfg是什么">Ansible.cfg是什么</a></li>
 </ul>
+<p>ansible.cfg</p>
 
-<h2 id="什么是playbook">什么是playbook</h2>
-
-<p>翻译过来就是剧本</p>
-
-<h2 id="playbook-组成">playbook 组成</h2>
-
-<p>play: 定义的是主机角色
-task：定义的具体的执行角色（部署代码/安装服务）
-playbook: 由一个或者多个play组成，一个play可以包含多个task</p>
-
-<h2 id="playbook的优势">playbook的优势</h2>
-
-<ol>
-  <li>功能比ad-hoc更全 （支持丰富的配置语法结构）</li>
-  <li>控制依赖关系</li>
-  <li>展示更加直观（配置文件）</li>
-  <li>持久使用</li>
-</ol>
+<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
+<pre><code class="language-angular2">macbookpro@bogon  /etc/ansible  tree
+.
+├── ansible.cfg
+├── hosts
+</code></pre>
+<h2 id="ansiblecfg是什么">Ansible.cfg是什么</h2>
+<p>Ansible.cfg是ansible自动化任务所用的一个核心配置文件，大部分的配置文件都集中在defualts配置项目中。</p>
 
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/08/02/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/08/03/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -1028,15 +1018,17 @@ playbook: 由一个或者多个play组成，一个play可以包含多个task</p>
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2022/08/10/jekyll/">Go学习系列03-常量</a></li>
+                        <li><a href="/2023/01/15/jekyll/">Go学习系列03-常量</a></li>
                     
-                        <li><a href="/2022/08/09/jekyll/">Go学习系列02-变量</a></li>
+                        <li><a href="/2022/12/01/jekyll/">Go学习系列01-安装环境</a></li>
                     
-                        <li><a href="/2022/08/08/jekyll/">Go学习系列01-安装环境</a></li>
+                        <li><a href="/2022/10/09/jekyll/">Go学习系列02-变量</a></li>
                     
                         <li><a href="/2022/08/07/jekyll/">playbook之yml内容讲解</a></li>
                     
                         <li><a href="/2022/08/05/jekyll/">playbook之yml配置</a></li>
+                    
+                        <li><a href="/2022/08/03/jekyll/">Ansible之配置文件ansible.cfg</a></li>
                     
                         <li><a href="/2022/08/02/jekyll/">playbook的组成</a></li>
                     
@@ -1044,9 +1036,7 @@ playbook: 由一个或者多个play组成，一个play可以包含多个task</p>
                     
                         <li><a href="/2022/07/09/jekyll/">Ansible之ad-hoc</a></li>
                     
-                        <li><a href="/2022/07/05/jekyll/">Ansible之配置文件hosts</a></li>
-                    
-                        <li><a href="/2022/07/03/jekyll/">Ansible之配置文件ansible.cfg</a></li>
+                        <li><a href="/2022/07/01/jekyll/">Ansible之安装</a></li>
                     
                 </ul>
             </div>

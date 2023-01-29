@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ansible之配置文件hosts</title>
-    <meta name="description" content="  Ansible 的配置目录  hosts 是什么  hosts 几种不同的配置ansible.cfgAnsible 的配置目录macbookpro@bogon  /etc/ansible  tree.├── ansible.cfg├── hostshosts 是什么hosts是ansible自动化任务中所...">
+    <title>python之set运用</title>
+    <meta name="description" content="  搭建方式集合（set）是一个无序的不重复元素序列可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。搭建方式bb = { s for s in a if s not in  'abc'}删除a.remove('aa...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4001/2022/07/05/jekyll/">
+    <link rel="canonical" href="http://localhost:4001/2021/02/08/jekyll/">
     <link rel="alternate" type="application/rss+xml" title="buqiu" href="http://localhost:4001/feed.xml ">
 
 
@@ -143,11 +143,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Ansible之配置文件hosts</h1>
+        <h1>python之set运用</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2022-07-05
+                <i class="fa fa-calendar"></i>2021-02-08
             </div>
 
             <div class="label-card">
@@ -170,7 +170,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
+        <a href="/category/#python" title="Category: python" rel="category">python</a>
     
   
 
@@ -187,8 +187,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a-->
-        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
+        <!--a href="/tag/#python" title="Tag: python" rel="tag">python</a-->
+        <a href="/tag/#python" title="Tag: python" rel="tag">python</a>
     
   
 
@@ -200,37 +200,20 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
-  <li><a href="#hosts-是什么" id="markdown-toc-hosts-是什么">hosts 是什么</a></li>
-  <li><a href="#hosts-几种不同的配置" id="markdown-toc-hosts-几种不同的配置">hosts 几种不同的配置</a></li>
+  <li><a href="#搭建方式" id="markdown-toc-搭建方式">搭建方式</a></li>
 </ul>
-<p>ansible.cfg</p>
+<p>集合（set）是一个无序的不重复元素序列
+可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。</p>
+<h2 id="搭建方式">搭建方式</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+bb = { s for s in a if s not in  'abc'}
 
-<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
-<pre><code class="language-angular2">macbookpro@bogon  /etc/ansible  tree
-.
-├── ansible.cfg
-├── hosts
-</code></pre>
-<h2 id="hosts-是什么">hosts 是什么</h2>
-<p>hosts是ansible自动化任务中所有的主机组</p>
-<h2 id="hosts-几种不同的配置">hosts 几种不同的配置</h2>
-<p>1.密码登录</p>
-
-<pre><code class="language-angular2">192.168.0.104:22 ansible_ssh_user=playcrab  ansible_ssh_pass='123456'
-192.168.0.110:22 ansible_ssh_user=root  ansible_ssh_pass='123123'
-
-</code></pre>
-<p>2.公钥登录</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.104:22 ansible_ssh_user=playcrab  ansible_ssh_key_file=/Users/macbookpro/.ssh/id_rsa
-192.168.0.110:22 ansible_ssh_user=root   ansible_ssh_key_file=/Users/macbookpro/.ssh/id_rsa
-</code></pre></div></div>
-
-<p>3.公钥配置在ansible.cfg</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.104:22 ansible_ssh_user=playcrab
-192.168.0.110:22 ansible_ssh_user=root
+删除
+a.remove('aa')
+添加多个
+a.update('dd')
+添加单个
+a.add('sss')
 
 </code></pre></div></div>
 
@@ -300,18 +283,6 @@
             
                 
                     
-                        
-                        <h2 id="similar_posts">Similar Posts</h2>
-                        <ul>
-                        
-                        <li class="relatedPost">
-                            <a href="/2022/07/03/jekyll/">Ansible之配置文件ansible.cfg
-                            
-                            </a>
-                        </li>
-                        
-                        
-                    
                 
             
         
@@ -319,32 +290,21 @@
             
                 
                     
-                        
-                        <li class="relatedPost">
-                            <a href="/2022/07/01/jekyll/">Ansible之安装
-                            
-                            </a>
-                        </li>
-                        
-                        
-                    
                 
             
         
-        
-            </ul>
         
 
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2022/07/03/jekyll/">Ansible之配置文件ansible.cfg</a></p>
+        <p><strong>上一篇</strong> <a href="/2010/06/06/jekyll/">如何设计restful api</a></p>
         
     </div>
     <div class="nex">
 
         
-        <p><strong>下一篇</strong> <a href="/2022/07/09/jekyll/">Ansible之ad-hoc</a></p>
+        <p><strong>下一篇</strong> <a href="/2021/04/09/jekyll/">GitHub快速的搭建个人博客到个性化设计</a></p>
         
     </div>
 </div>
@@ -368,8 +328,6 @@
                     Content
                 </div>
                 <ul id="content-side" class="content-ul">
-                    
-                    <li><a href="#similar_posts">Similar Posts</a></li>
                     
                     <li><a href="#comments">Comments</a></li>
                 </ul>

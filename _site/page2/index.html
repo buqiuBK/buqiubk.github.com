@@ -150,6 +150,90 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/08/02/jekyll/">playbook的组成</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-08-02
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#playbook" title="Tag: playbook" rel="tag">playbook</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#什么是playbook" id="markdown-toc-什么是playbook">什么是playbook</a></li>
+  <li><a href="#playbook-组成" id="markdown-toc-playbook-组成">playbook 组成</a></li>
+  <li><a href="#playbook的优势" id="markdown-toc-playbook的优势">playbook的优势</a></li>
+</ul>
+
+<h2 id="什么是playbook">什么是playbook</h2>
+
+<p>翻译过来就是剧本</p>
+
+<h2 id="playbook-组成">playbook 组成</h2>
+
+<p>play: 定义的是主机角色
+task：定义的具体的执行角色（部署代码/安装服务）
+playbook: 由一个或者多个play组成，一个play可以包含多个task</p>
+
+<h2 id="playbook的优势">playbook的优势</h2>
+
+<ol>
+  <li>功能比ad-hoc更全 （支持丰富的配置语法结构）</li>
+  <li>控制依赖关系</li>
+  <li>展示更加直观（配置文件）</li>
+  <li>持久使用</li>
+</ol>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/08/02/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/07/11/jekyll/">Ansible之代码部署</a>
                 </h2>
                 <div class="label">
@@ -317,174 +401,6 @@ ansible one -m git -a "repo=https://github.com/buqiucdn/buqiucdn.github.io dest=
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/07/05/jekyll/">Ansible之配置文件hosts</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-07-05
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>YztSon
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
-  <li><a href="#hosts-是什么" id="markdown-toc-hosts-是什么">hosts 是什么</a></li>
-  <li><a href="#hosts-几种不同的配置" id="markdown-toc-hosts-几种不同的配置">hosts 几种不同的配置</a></li>
-</ul>
-<p>ansible.cfg</p>
-
-<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
-<pre><code class="language-angular2">macbookpro@bogon  /etc/ansible  tree
-.
-├── ansible.cfg
-├── hosts
-</code></pre>
-<h2 id="hosts-是什么">hosts 是什么</h2>
-<p>hosts是ansible自动化任务中所有的主机组</p>
-<h2 id="hosts-几种不同的配置">hosts 几种不同的配置</h2>
-<p>1.密码登录</p>
-
-<pre><code class="language-angular2">192.168.0.104:22 ansible_ssh_user=playcrab  ansible_ssh_pass='123456'
-192.168.0.110:22 ansible_ssh_user=root  ansible_ssh_pass='123123'
-
-</code></pre>
-<p>2.公钥登录</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.104:22 ansible_ssh_user=playcrab  ansible_ssh_key_file=/Users/macbookpro/.ssh/id_rsa
-192.168.0.110:22 ansible_ssh_user=root   ansible_ssh_key_file=/Users/macbookpro/.ssh/id_rsa
-</code></pre></div></div>
-
-<p>3.公钥配置在ansible.cfg</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.104:22 ansible_ssh_user=playcrab
-192.168.0.110:22 ansible_ssh_user=root
-
-</code></pre></div></div>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/07/05/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/07/03/jekyll/">Ansible之配置文件ansible.cfg</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-07-03
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>YztSon
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
-  <li><a href="#ansiblecfg是什么" id="markdown-toc-ansiblecfg是什么">Ansible.cfg是什么</a></li>
-</ul>
-<p>ansible.cfg</p>
-
-<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
-<pre><code class="language-angular2">macbookpro@bogon  /etc/ansible  tree
-.
-├── ansible.cfg
-├── hosts
-</code></pre>
-<h2 id="ansiblecfg是什么">Ansible.cfg是什么</h2>
-<p>Ansible.cfg是ansible自动化任务所用的一个核心配置文件，大部分的配置文件都集中在defualts配置项目中。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/07/03/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
                   <a class="post-link" href="/2022/07/01/jekyll/">Ansible之安装</a>
                 </h2>
                 <div class="label">
@@ -573,6 +489,100 @@ easy_install ansible
                 </div>
                 <div class="read-all">
                     <a  href="/2022/07/01/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/06/05/jekyll/">Ansible之配置文件hosts</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-06-05
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>YztSon
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Ansible" title="Category: Ansible" rel="category">Ansible</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Ansible" title="Tag: Ansible" rel="tag">Ansible</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#ansible-的配置目录" id="markdown-toc-ansible-的配置目录">Ansible 的配置目录</a></li>
+  <li><a href="#hosts-是什么" id="markdown-toc-hosts-是什么">hosts 是什么</a></li>
+  <li><a href="#hosts-几种不同的配置" id="markdown-toc-hosts-几种不同的配置">hosts 几种不同的配置</a></li>
+</ul>
+<p>ansible.cfg</p>
+
+<h2 id="ansible-的配置目录">Ansible 的配置目录</h2>
+<pre><code class="language-angular2">macbookpro@bogon  /etc/ansible  tree
+.
+├── ansible.cfg
+├── hosts
+</code></pre>
+<h2 id="hosts-是什么">hosts 是什么</h2>
+<p>hosts是ansible自动化任务中所有的主机组</p>
+<h2 id="hosts-几种不同的配置">hosts 几种不同的配置</h2>
+<p>1.密码登录</p>
+
+<pre><code class="language-angular2">192.168.0.104:22 ansible_ssh_user=playcrab  ansible_ssh_pass='123456'
+192.168.0.110:22 ansible_ssh_user=root  ansible_ssh_pass='123123'
+
+</code></pre>
+<p>2.公钥登录</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.104:22 ansible_ssh_user=playcrab  ansible_ssh_key_file=/Users/macbookpro/.ssh/id_rsa
+192.168.0.110:22 ansible_ssh_user=root   ansible_ssh_key_file=/Users/macbookpro/.ssh/id_rsa
+</code></pre></div></div>
+
+<p>3.公钥配置在ansible.cfg</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.104:22 ansible_ssh_user=playcrab
+192.168.0.110:22 ansible_ssh_user=root
+
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/06/05/jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -705,15 +715,17 @@ easy_install ansible
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2022/08/10/jekyll/">Go学习系列03-常量</a></li>
+                        <li><a href="/2023/01/15/jekyll/">Go学习系列03-常量</a></li>
                     
-                        <li><a href="/2022/08/09/jekyll/">Go学习系列02-变量</a></li>
+                        <li><a href="/2022/12/01/jekyll/">Go学习系列01-安装环境</a></li>
                     
-                        <li><a href="/2022/08/08/jekyll/">Go学习系列01-安装环境</a></li>
+                        <li><a href="/2022/10/09/jekyll/">Go学习系列02-变量</a></li>
                     
                         <li><a href="/2022/08/07/jekyll/">playbook之yml内容讲解</a></li>
                     
                         <li><a href="/2022/08/05/jekyll/">playbook之yml配置</a></li>
+                    
+                        <li><a href="/2022/08/03/jekyll/">Ansible之配置文件ansible.cfg</a></li>
                     
                         <li><a href="/2022/08/02/jekyll/">playbook的组成</a></li>
                     
@@ -721,9 +733,7 @@ easy_install ansible
                     
                         <li><a href="/2022/07/09/jekyll/">Ansible之ad-hoc</a></li>
                     
-                        <li><a href="/2022/07/05/jekyll/">Ansible之配置文件hosts</a></li>
-                    
-                        <li><a href="/2022/07/03/jekyll/">Ansible之配置文件ansible.cfg</a></li>
+                        <li><a href="/2022/07/01/jekyll/">Ansible之安装</a></li>
                     
                 </ul>
             </div>
